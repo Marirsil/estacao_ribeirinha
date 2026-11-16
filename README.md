@@ -15,7 +15,7 @@ A **Estação Ribeirinha** é uma proposta de solução integrada que combina en
 [Acessar painel demonstrativo](https://estacaoribeirinha.vercel.app/#painel)
 
 **Repositório GitHub:**  
-`INSERIR_LINK_DO_REPOSITORIO`
+`[INSERIR_LINK_DO_REPOSITORIO](https://github.com/Marirsil/estacao_ribeirinha/tree/main)`
 
 ---
 
