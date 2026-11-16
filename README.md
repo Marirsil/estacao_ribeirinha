@@ -1,94 +1,163 @@
-# Estação Ribeirinha — Site completo
+# 🌿 Estação Ribeirinha
 
-**Plataforma de apresentação e demonstração da Estação Ribeirinha.** Site responsivo que explica o problema, mostra a solução, oferece dois simuladores interativos e um painel demonstrativo de alertas à Defesa Civil.
+**Energia, informação e segurança para comunidades que vivem do rio.**
 
-## Abrir e testar (sem instalar nada)
+A **Estação Ribeirinha** é uma proposta de solução integrada que combina energia solar, armazenamento em bateria, monitoramento do nível do rio e sinalização comunitária. O site apresenta a solução, seu impacto social e demonstrações interativas do monitoramento e da autonomia energética.
 
-1. Extraia o ZIP inteiro, mantendo a estrutura de pastas.
-2. Abra `index.html` com Chrome, Edge, Firefox ou Safari. **Funciona sem internet** (o site e as imagens são locais).
-3. Clique em **Simulações** para ajustar o nível do rio e usar os quatro dias de energia.
-4. Clique em **Painel demonstrativo** para acompanhar os alertas e visualizar as notificações fictícias.
+---
 
-Opcionalmente, execute um servidor local na pasta do projeto:
+## 🔗 Links
+
+**Site publicado na Vercel:**  
+[Estação Ribeirinha — Acessar site](https://estacaoribeirinha.vercel.app/)
+
+**Painel da Defesa Civil:**  
+[Acessar painel demonstrativo](https://estacaoribeirinha.vercel.app/#painel)
+
+**Repositório GitHub:**  
+`INSERIR_LINK_DO_REPOSITORIO`
+
+---
+
+## 🎯 Objetivo
+
+Apoiar comunidades ribeirinhas com **acesso a energia essencial, informação sobre a elevação dos rios e sinalização local**. A solução reúne infraestrutura física e uma interface digital para acompanhar medições e alertas em localidades atendidas.
+
+### Impacto social
+
+- **Saúde:** iluminação e recarga de lanternas para deslocamentos e emergências, especialmente à noite.
+- **Educação:** energia de apoio para estudos e atividades educacionais.
+- **Mobilidade:** possibilidade de apoio energético a equipamentos e embarcações que utilizem baterias, conforme a infraestrutura disponível.
+- **Trabalho e renda:** apoio à rotina e às atividades produtivas das comunidades.
+- **Segurança e comunicação:** informações claras sobre a elevação do rio e alertas locais.
+- **Dignidade:** mais autonomia, iluminação e acesso a recursos essenciais.
+
+---
+
+## ⚙️ Tecnologias utilizadas
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt="CSS3" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" alt="Git" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40" alt="GitHub" />
+</div>
+
+**Hospedagem:** Vercel. A interface é feita com HTML, CSS e JavaScript, com código-fonte TypeScript e sem dependência de frameworks para a execução do site.
+
+---
+
+## 🌊 Como funciona a Estação Ribeirinha
+
+1. **Captação:** o painel solar fornece energia ao sistema.
+2. **Armazenamento:** a bateria mantém uma reserva energética.
+3. **Monitoramento:** um sensor acompanha o nível do rio.
+4. **Registro:** as leituras são organizadas em histórico.
+5. **Sinalização:** indicadores visuais e aviso sonoro informam as condições locais.
+6. **Comunicação:** quando existe conectividade, os registros e alertas podem ser encaminhados à central.
+7. **Acompanhamento:** a Defesa Civil pode consultar as informações em seu painel.
+
+---
+
+## 🖥️ Funcionalidades do site
+
+- Apresentação da solução e de seus componentes.
+- Conteúdo resumido sobre desafios e impactos nas comunidades ribeirinhas.
+- **Simulador do nível do rio** com atualização visual, histórico e sinalização por faixas.
+- **Simulação de autonomia energética** durante quatro dias sem geração solar.
+- **Painel demonstrativo da Defesa Civil** com registros e filtros de alertas.
+- Demonstração de conectividade, fila de notificações e sincronização.
+- Exportação de alertas em CSV.
+- Layout responsivo e alternância entre temas claro e escuro.
+
+### Simulação de energia — quatro dias
+
+| Etapa | Energia restante |
+|---|---:|
+| Reserva inicial | 250 Wh |
+| Dia 1 | 203 Wh |
+| Dia 2 | 156 Wh |
+| Dia 3 | 109 Wh |
+| Dia 4 | **62 Wh** |
+
+**Consumo adotado:** 47 Wh por dia. Os valores acima fazem parte do cenário interativo apresentado no site.
+
+---
+
+## 📁 Estrutura do projeto
+
+```text
+estacao-ribeirinha/
+├── index.html
+├── styles/
+│   └── main.css
+├── js/
+│   ├── data.js
+│   └── main.js
+├── src/
+│   ├── data.ts
+│   └── main.ts
+├── images/
+│   └── *.webp
+├── assets/
+│   └── favicon.svg
+├── README.md
+└── FONTES.md
+```
+
+---
+
+## 🚀 Como executar
+
+1. Clone o repositório ou baixe o projeto como ZIP.
+2. Extraia os arquivos, preservando a estrutura de pastas.
+3. Abra o arquivo `index.html` no navegador.
+
+Para executar com servidor local, na pasta do projeto:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Abra `http://localhost:8080` no navegador. Também funciona ao arrastar a pasta para um serviço de hospedagem estática.
+Acesse [http://localhost:8080](http://localhost:8080).
 
-## Código-fonte e stack
-
-- **HTML5 semântico**: `index.html`
-- **CSS puro responsivo**: `styles/main.css`
-- **TypeScript**: `src/data.ts` (dados) e `src/main.ts` (lógica dos simuladores)
-- **JavaScript compilado**: `js/data.js` e `js/main.js`, incluídos para rodar imediatamente
-- **Imagens otimizadas**: `images/*.webp` (conceitos visuais gerados por IA; nenhuma foto é de instalação real)
-- **Logo simples**: `assets/favicon.svg`
-
-A escolha por TypeScript + DOM nativo, sem React ou bibliotecas externas, foi intencional para permitir **execução offline sem instalação e hospedagem estática sem custo**. Não há dependência de CDN, framework, API ou serviços de terceiros para a demonstração.
-
-Para modificar o código TypeScript e recompilar:
+Para modificar os arquivos TypeScript e gerar novamente o JavaScript:
 
 ```bash
 npm install
 npm run build
 ```
 
-Ou, se já possui `tsc` global: `tsc --project tsconfig.json`.
+---
 
-## Testes de funcionalidades
+## 📊 Dados e integração
 
-| O que testar | Resultado esperado |
-|---|---|
-| Mover controle deslizante de nível | Indicador em metros e semáforo local atualizam na hora |
-| Registrar leitura acima de limiar | Novo alerta fictício aparece no painel |
-| Desligar conexão e registrar alerta | Alerta criado como `PENDENTE` |
-| Tentar sincronizar desconectado | Site informa que não há conexão |
-| Religar e sincronizar | Alertas pendentes passam para `ENVIADO` (simulado) |
-| Confirmar recebimento no painel | Alerta passa a `RECEBIDO` (simulado) |
-| Filtrar alertas por comunidade, status e período | Tabela exibe apenas os resultados correspondentes |
-| Exportar CSV | Arquivo com alertas simulados é baixado |
-| Escolher Dia 4 | Mostra 62 Wh restantes e 188 Wh consumidos |
-| Trocar tema | Alterna entre claro e escuro |
-| Reiniciar demo | Restaura níveis, alertas, conectividade e energia de exemplo |
+Os painéis utilizam **dados demonstrativos** e reproduzem situações de monitoramento, alertas e autonomia energética. A organização dos dados é compatível com as entidades planejadas: `COMUNIDADE`, `ESTACAO`, `LEITURA_RIO`, `LEITURA_ENERGIA`, `ALERTA` e `DEFESA_CIVIL`.
 
-O JavaScript é compilado e a interface foi testada em navegador Chromium em desktop e tamanho de celular. As medições não são recebidas de sensores reais.
+O site pode evoluir para integração com sensores físicos, serviço de API e banco de dados. As fontes das pesquisas e indicadores sociais estão reunidas em `FONTES.md`.
 
-## Regras de segurança e fidelidade ao projeto
+---
 
-1. Os números e limites de nível do rio do simulador **são fictícios**, sem validade hidrológica.
-2. O semáforo local é uma **representação visual**, não um equipamento físico conectado.
-3. A central da Defesa Civil é **demonstrativa**, sem login real e sem envio de mensagens a órgãos públicos.
-4. A alternância de conectividade reproduz estados locais. Ao ficar offline, as notificações permanecem pendentes até sincronização simulada.
-5. Os 4 dias de energia são uma **simulação matemática**: 250 Wh úteis iniciais − 47 Wh/dia × 4 dias = **62 Wh**. Não foi feito teste real com bateria.
-6. O saneamento aparece como contexto dos riscos sanitários em enchentes, com fonte oficial.
-7. O morador não precisa de celular para perceber um aviso físico. O painel web destina-se a operadores de uma eventual central com conectividade.
+## 👥 Autores
 
-## Organização dos dados
+- **Augusto Valerio** — RM: 562185  
+  GitHub: https://github.com/Augusto-Valerio
 
-Os dados fictícios são inspirados nas 6 tabelas de Database Design acordadas:
+- **Jonas Esteves França** — RM: 564143  
+  GitHub: https://github.com/Jonas-Franca
 
-`COMUNIDADE` → `ESTACAO` → `LEITURA_RIO` / `LEITURA_ENERGIA` → `ALERTA` → `DEFESA_CIVIL`
+- **Mariana Silva Oliveira** — RM: 564241  
+  GitHub: https://github.com/Marirsil
 
-O site funciona independentemente do Oracle e da API Java. O arquivo `src/data.ts` pode futuramente ser substituído por chamadas à API Spring Boot, com controle de autenticação e autorização no servidor.
+- **Pedro Marchese** — RM: 563339  
+  GitHub: https://github.com/PedroMarchese01
 
-## Publicação gratuita
-
-### Netlify
-
-Extraia o ZIP e arraste a **pasta do site** (ou seu conteúdo) para um novo projeto em https://app.netlify.com/drop. Não há etapa de build obrigatória: `index.html` está pronto.
-
-### Vercel
-
-Crie um projeto estático e faça upload/repositório com o conteúdo desta pasta. Como não há framework, configure o diretório raiz do projeto como saída estática e **sem comando de build**.
-
-### GitHub Pages
-
-Publique o conteúdo desta pasta em um repositório e ative *Settings → Pages*. As rotas são por âncora `#`, sem necessidade de regras de rewrite.
-
-## Fontes e créditos
-
-Os links das referências originais aparecem no bloco **Fontes e transparência** do próprio site e são resumidos em `FONTES.md`.
-
-Imagens geradas por IA são identificadas como representações conceituais. O site é um protótipo acadêmico e não deve ser usado como sistema operacional de alerta de enchentes.
+- **Vitor Rodrigues Tigre** — RM: 561746  
+  GitHub: https://github.com/VitorTigre
