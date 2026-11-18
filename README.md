@@ -1,3 +1,4 @@
+
 # 🌿 Estação Ribeirinha
 
 **Energia, informação e segurança para comunidades que vivem do rio.**
@@ -15,7 +16,25 @@ A **Estação Ribeirinha** é uma proposta de solução integrada que combina en
 [Acessar painel demonstrativo](https://estacaoribeirinha.vercel.app/#painel)
 
 **Repositório GitHub:**  
-[INSERIR_LINK_DO_REPOSITORIO](https://github.com/Marirsil/estacao_ribeirinha/tree/main)
+[Estação Ribeirinha — GitHub](https://github.com/Marirsil/estacao_ribeirinha)
+
+---
+
+## 📋 Ficha da CitizenTech
+
+| Campo | Definição |
+|---|---|
+| **Nome da CitizenTech** | Estação Ribeirinha |
+| **Cidade e bairro / território** | Comunidades ribeirinhas da Amazônia, com estrutura preparada para cadastrar estações de diferentes municípios e estados brasileiros. |
+| **Cidadãos beneficiados** | Moradores de comunidades ribeirinhas amazônicas e agentes comunitários responsáveis pelo acompanhamento das condições locais. |
+| **Problema** | Dificuldade de concentrar e acompanhar informações locais sobre o nível da água, a energia disponível na bateria da estação e os avisos comunitários. |
+| **Como funciona** | Cada estação registra o nível da água e o percentual de carga da bateria que mantém o ponto de monitoramento em funcionamento. A arquitetura proposta prevê uma API que armazena os dados no Oracle, calcula a tendência do nível e disponibiliza as informações para o frontend. |
+| **O que cada parte faz** | O backend Java aplica as regras e disponibiliza a API; o Oracle armazena os dados; o frontend permite consultar e gerenciar estações, leituras e avisos. |
+| **Indicadores de impacto** | Quantidade de estações acompanhadas, leituras registradas, avisos comunitários cadastrados e continuidade do histórico de monitoramento. |
+| **ODS relacionados** | ODS 7 - Energia Acessível e Limpa; ODS 10 - Redução das Desigualdades; ODS 11 - Cidades e Comunidades Sustentáveis; ODS 13 - Ação Contra a Mudança Global do Clima. |
+| **Repositório** | [github.com/Marirsil/estacao_ribeirinha](https://github.com/Marirsil/estacao_ribeirinha) |
+
+> **Observação:** Os dados utilizados no frontend são demonstrativos. As tendências e os avisos apresentados pela aplicação não substituem comunicados da Defesa Civil nem representam previsões oficiais de enchentes. A integração Java/Oracle faz parte da arquitetura descrita para a solução.
 
 ---
 
@@ -51,6 +70,16 @@ Apoiar comunidades ribeirinhas com **acesso a energia essencial, informação so
 </div>
 
 **Hospedagem:** Vercel. A interface é feita com HTML, CSS e JavaScript, com código-fonte TypeScript e sem dependência de frameworks para a execução do site.
+
+### Arquitetura da solução
+
+A arquitetura proposta da Estação Ribeirinha está organizada em três componentes principais:
+
+- **Frontend:** interface web responsável pela apresentação das informações, simulações e visualização dos alertas.
+- **Backend:** aplicação Java responsável pelas regras de negócio, processamento das leituras e disponibilização de endpoints REST.
+- **Banco de dados:** Oracle Database, responsável pelo armazenamento estruturado das comunidades, estações, medições e alertas.
+
+O frontend demonstrativo pode funcionar independentemente da integração com os demais componentes.
 
 ---
 
@@ -128,7 +157,7 @@ python3 -m http.server 8080
 
 Acesse [http://localhost:8080](http://localhost:8080).
 
-Para modificar os arquivos TypeScript e gerar novamente o JavaScript:
+Para modificar os arquivos TypeScript e gerar novamente o JavaScript, caso os scripts de compilação estejam configurados:
 
 ```bash
 npm install
@@ -139,9 +168,46 @@ npm run build
 
 ## 📊 Dados e integração
 
-Os painéis utilizam **dados demonstrativos** e reproduzem situações de monitoramento, alertas e autonomia energética. A organização dos dados é compatível com as entidades planejadas: `COMUNIDADE`, `ESTACAO`, `LEITURA_RIO`, `LEITURA_ENERGIA`, `ALERTA` e `DEFESA_CIVIL`.
+Os painéis utilizam **dados demonstrativos** e reproduzem situações de monitoramento, alertas e autonomia energética.
 
-O site pode evoluir para integração com sensores físicos, serviço de API e banco de dados. As fontes das pesquisas e indicadores sociais estão reunidas em `FONTES.md`.
+A organização dos dados é compatível com as entidades planejadas:
+
+| Entidade | Responsabilidade |
+|---|---|
+| `COMUNIDADE` | Cadastro das comunidades ribeirinhas atendidas. |
+| `ESTACAO` | Identificação e localização das estações de monitoramento. |
+| `LEITURA_RIO` | Registro das medições do nível do rio. |
+| `LEITURA_ENERGIA` | Registro do estado de carga e da disponibilidade energética. |
+| `ALERTA` | Histórico dos alertas e avisos registrados. |
+| `DEFESA_CIVIL` | Informações dos responsáveis pelo acompanhamento dos alertas. |
+
+### Integração prevista
+
+A solução prevê a comunicação entre sensores físicos, backend Java, banco Oracle e frontend.
+
+O fluxo de dados contempla:
+
+1. Coleta das informações dos sensores da estação.
+2. Envio das leituras para a API quando houver conectividade.
+3. Processamento e armazenamento dos registros.
+4. Análise das condições do rio e da disponibilidade energética.
+5. Disponibilização dos dados para o painel de acompanhamento.
+6. Apresentação de alertas para apoiar a atuação da Defesa Civil.
+
+O site pode evoluir para integração direta com sensores físicos, serviço de API e banco de dados.
+
+As fontes das pesquisas e indicadores sociais estão previstas na documentação `FONTES.md`.
+
+---
+
+## 🌎 Objetivos de Desenvolvimento Sustentável
+
+A Estação Ribeirinha está alinhada aos seguintes Objetivos de Desenvolvimento Sustentável (ODS) da Organização das Nações Unidas:
+
+- **ODS 7 — Energia Acessível e Limpa:** promoção do acesso à energia solar e ao armazenamento energético.
+- **ODS 10 — Redução das Desigualdades:** ampliação do acesso à informação e a recursos essenciais em comunidades isoladas.
+- **ODS 11 — Cidades e Comunidades Sustentáveis:** apoio à segurança, resiliência e infraestrutura comunitária.
+- **ODS 13 — Ação Contra a Mudança Global do Clima:** apoio ao monitoramento de condições ambientais e à preparação diante de eventos de inundação.
 
 ---
 
@@ -161,3 +227,7 @@ O site pode evoluir para integração com sensores físicos, serviço de API e b
 
 - **Vitor Rodrigues Tigre** — RM: 561746  
   GitHub: https://github.com/VitorTigre
+
+---
+
+**🌿 Estação Ribeirinha — Tecnologia, energia e informação a serviço das comunidades ribeirinhas.**
